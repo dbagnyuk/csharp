@@ -85,6 +85,7 @@ namespace ConsoleDigitInsert
                     pressedKey = Console.ReadKey(true);
                     if (pressedKey.Key == ConsoleKey.Enter || pressedKey.Key == ConsoleKey.Escape)
                         break;
+                    else continue;
                 }
 
             } while (pressedKey.Key != ConsoleKey.Escape);
