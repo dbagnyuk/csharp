@@ -59,22 +59,22 @@ namespace ConsoleDigitInsert
                 double b = insertDigitControl.processingInput();
 #endif
                 Console.WriteLine("When:");
-                Console.WriteLine("a = " + a);
-                Console.WriteLine("b = " + b);
+                Console.WriteLine("a = " + a.ToString("0.00"));
+                Console.WriteLine("b = " + b.ToString("0.00"));
 
                 Console.WriteLine("Then:");
-                Console.WriteLine("c = a + b = " + Calculation.Plus(a, b));
-                Console.WriteLine("c = a - b = " + Calculation.Minus(a, b));
-                Console.WriteLine("c = a * b = " + Calculation.Multiplication(a, b));
+                Console.WriteLine("c = a + b = " + Calculation.Plus(a, b).ToString("0.00"));
+                Console.WriteLine("c = a - b = " + Calculation.Minus(a, b).ToString("0.00"));
+                Console.WriteLine("c = a * b = " + Calculation.Multiplication(a, b).ToString("0.00"));
 
                 if (b == 0)
                     Console.WriteLine("|c = a / b| Error. can`t divide by 0");
-                else Console.WriteLine("c = a / b = " + Calculation.Division(a, b));
+                else Console.WriteLine("c = a / b = " + Calculation.Division(a, b).ToString("0.00"));
 
                 if (b == 0)
                     Console.WriteLine("|c = (a+b)-(a-b) / (a*b)| Error. can`t divide by 0");
                 else
-                    Console.WriteLine("c = (a+b)-(a-b) / (a*b) = " + Calculation.MultiAction(a, b));
+                    Console.WriteLine("c = (a+b)-(a-b) / (a*b) = " + Calculation.MultiAction(a, b).ToString("0.00"));
 
                 //Console.Clear(); // clearing the console
                 Console.WriteLine("\nIf you'd like to stop using calculator, please, press the Esc button.");
